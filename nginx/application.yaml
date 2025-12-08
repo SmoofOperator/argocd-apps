@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/SmoofOperator/argocd-apps.git
     targetRevision: main
     path: nginx
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx

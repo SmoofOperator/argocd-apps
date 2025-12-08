@@ -1,0 +1,17 @@
+name: nginx
+namespace: nginx
+replicas: 1
+image:
+  repository: nginx
+  tag: "1.26"
+  pullPolicy: IfNotPresent
+
+service:
+  port: 80
+
+ingress:
+  enabled: true
+  host: nginx.teklogi.systems
+  path: /
+
+env: {}
