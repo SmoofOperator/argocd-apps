@@ -4,6 +4,8 @@ kind: IngressRoute
 metadata:
   name: {{ include "nginx.fullname" . }}
   namespace: {{ .Values.namespace }}
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
 spec:
   entryPoints:
     - websecure
